@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import VisitTracker from "./components/VisitTracker";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Newi — Portfolio",
@@ -29,7 +30,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <VisitTracker />
+        <Suspense fallback={null}>
+          <VisitTracker />
+        </Suspense>
         {children}</body>
     </html>
   );

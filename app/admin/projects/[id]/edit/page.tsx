@@ -1,5 +1,6 @@
 
 import ProjectForm from "../../ProjectForm";
+export const instant = false;
 
 export default async function EditProjectPage({
   params,
